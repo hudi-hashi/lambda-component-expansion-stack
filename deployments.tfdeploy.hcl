@@ -33,6 +33,7 @@ orchestrate "auto_approve" "safe_plans" {
 
   # Ensure that the deployment is not production or disaster-recovery
   check { 
-    condition = context.plan.deployment.name != "production" && context.plan.deployment.name != "disaster-recovery" reason = "Production and Disaster Recovery plans are not eligible for auto_approve." 
+    condition = context.plan.deployment.name != "production" && context.plan.deployment.name != "disaster-recovery" 
+    reason = "Production and Disaster Recovery plans are not eligible for auto_approve." 
   } 
 }
