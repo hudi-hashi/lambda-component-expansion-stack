@@ -17,7 +17,7 @@ deployment "development" {
 
 deployment "production" {
   inputs = {
-    regions        = ["us-east-1", "us-west-1"]
+    regions        = ["us-west-1"]
     role_arn       = "arn:aws:iam::482424472779:role/stacks-hudi-test-stack-test-lambda-component-expansion-stack"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
